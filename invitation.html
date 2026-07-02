@@ -72,37 +72,6 @@ body{
 }
 
 /* LEFT IMAGE */
-.image-section{
-    flex:1;
-    display:flex;
-    justify-content:center;
-}
-
-.image-box{
-    width:100%;
-    max-width:420px;
-    height:520px;
-    border-radius:14px;
-    overflow:hidden;
-    position:relative;
-}
-
-.image-box img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    filter:contrast(115%) saturate(105%) brightness(0.9);
-    image-rendering:auto;
-}
-
-/* overlay texture */
-/* REMOVE THIS ENTIRE PART */
-.image-box::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-}
 
 /* RIGHT CONTENT */
 .content{
@@ -238,12 +207,6 @@ body{
 
     <div class="invite-wrapper">
 
-        <!-- LEFT IMAGE -->
-        <div class="image-section">
-            <div class="image-box">
-                <img src="8W9A5085.jpg" alt="Graduate">
-            </div>
-        </div>
 
         <!-- RIGHT CONTENT -->
         <div class="content">
