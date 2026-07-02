@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Graduation Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Space Grotesk', sans-serif;
+}
+
+body{
+    background:#04162e;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* glow background */
+.background-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.blue{
+    width:700px;
+    height:700px;
+    background:#0077ff;
+    left:-200px;
+    top:-150px;
+    opacity:.55;
+}
+
+.red{
+    width:400px;
+    height:400px;
+    background:#ff3400;
+    right:-100px;
+    top:200px;
+    opacity:.4;
+}
+
+/* main layout */
+.container{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px 20px;
+    z-index:2;
+}
+
+/* wrapper for 2 columns */
+.invite-wrapper{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    max-width:1100px;
+    width:100%;
+}
+
+/* LEFT IMAGE */
+.image-section{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.image-box{
+    width:100%;
+    max-width:420px;
+    height:520px;
+    border-radius:14px;
+    overflow:hidden;
+    position:relative;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:contrast(115%) saturate(105%) brightness(0.9);
+    image-rendering:auto;
+}
+
+/* overlay texture */
+/* REMOVE THIS ENTIRE PART */
+.image-box::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+/* RIGHT CONTENT */
+.content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+/* top labels */
+.small{
+    position:absolute;
+    font-size:12px;
+    letter-spacing:3px;
+    color:#8ec5ff;
+}
+
+.top-left{ top:25px; left:25px; }
+.top-center{ top:25px; left:50%; transform:translateX(-50%); }
+.top-right{ top:25px; right:25px; }
+
+/* title */
+.title{
+    font-size:clamp(32px, 5vw, 60px);
+    font-weight:700;
+    letter-spacing:-1px;
+}
+
+.subtitle{
+    margin-top:6px;
+    font-size:12px;
+    letter-spacing:6px;
+    color:#9fc7ff;
+}
+
+/* card */
+.info-card{
+    margin-top:25px;
+    width:100%;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:18px;
+    padding:22px;
+}
+
+.info-card h2{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.info-card p{
+    color:#d4d4d4;
+    margin-bottom:15px;
+}
+
+.details{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.details span{
+    color:#7db8ff;
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+.details strong{
+    display:block;
+    font-size:16px;
+    margin-top:3px;
+}
+
+/* quotes */
+.quotes{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+    font-size:12px;
+    text-transform:uppercase;
+    color:#b8d8ff;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+    .invite-wrapper{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
+    }
+
+    .content{
+        align-items:center;
+    }
+
+    .info-card{
+        text-align:center;
+    }
+
+    .quotes{
+        grid-template-columns:1fr;
+    }
+
+    .image-box{
+        height:420px;
+        max-width:90vw;
+    }
+}
+
+@media (max-width:500px){
+    .image-box{
+        height:360px;
+    }
+
+    .info-card{
+        padding:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background-glow blue"></div>
+<div class="background-glow red"></div>
+
+<div class="container">
+
+    <div class="small top-left">Graduation</div>
+    <div class="small top-center">Celebration</div>
+    <div class="small top-right">2026</div>
+
+    <div class="invite-wrapper">
+
+        <!-- LEFT IMAGE -->
+        <div class="image-section">
+            <div class="image-box">
+                <img src="8W9A5085.jpg" alt="Graduate">
+            </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="content">
+
+            <div class="title">Graduation Party</div>
+            <div class="subtitle">A NEW CHAPTER BEGINS</div>
+
+            <div class="info-card">
+                <h2>You're Invited</h2>
+                <p>Join us as we celebrate graduation.</p>
+
+                <div class="details">
+                    <div>
+                        <span>Date</span>
+                        <strong>Sunday, July 5, 2026</strong>
+                    </div>
+
+                    <div>
+                        <span>Time</span>
+                        <strong>9:00 AM</strong>
+                    </div>
+
+                    <div>
+                        <span>Location</span>
+                        <strong>Kotebe</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quotes">
+                <p>Dream.</p>
+                <p>Achieve.</p>
+                <p>Celebrate.</p>
+                <p>Future Starts Here.</p>
+                <p>Hard Work Paid Off.</p>
+                <p>Class of 2026.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
