@@ -62,7 +62,7 @@ body{
     z-index:2;
 }
 
-/* wrapper for 2 columns */
+/* wrapper */
 .invite-wrapper{
     display:flex;
     gap:50px;
@@ -92,16 +92,6 @@ body{
     height:100%;
     object-fit:cover;
     filter:contrast(115%) saturate(105%) brightness(0.9);
-    image-rendering:auto;
-}
-
-/* overlay texture */
-/* REMOVE THIS ENTIRE PART */
-.image-box::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
 }
 
 /* RIGHT CONTENT */
@@ -174,6 +164,31 @@ body{
     display:block;
     font-size:16px;
     margin-top:3px;
+}
+
+/* clickable links */
+.link-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:5px;
+    color:#62b7ff;
+    font-size:16px;
+    font-weight:600;
+    text-decoration:underline;
+    text-decoration-thickness:2px;
+    text-underline-offset:4px;
+    transition:.25s;
+}
+
+.link-btn:hover{
+    color:#ffffff;
+    transform:translateX(4px);
+}
+
+.link-btn::after{
+    content:"↗";
+    font-size:14px;
 }
 
 /* quotes */
@@ -268,7 +283,26 @@ body{
 
                     <div>
                         <span>Location</span>
-                        <strong>Kotebe</strong>
+                        <strong>
+                            <a class="link-btn"
+                               href="https://maps.app.goo.gl/h3CmiXviFrfKHH4F8"
+                               target="_blank"
+                               rel="noopener">
+                               Kotebe<sub>click for more</sub>
+                            </a>
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Gallery</span>
+                        <strong>
+                            <a class="link-btn"
+                               href="https://graduation-party-gallery.vercel.app/"
+                               target="_blank"
+                               rel="noopener">
+                               View Gallery<sub>click for more</sub>
+                            </a>
+                        </strong>
                     </div>
                 </div>
             </div>
